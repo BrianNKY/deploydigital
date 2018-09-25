@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mentionslegales</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mentionslegales.each do |mentionslegale| %>
+      <tr>
+        <td><%= link_to 'Show', mentionslegale %></td>
+        <td><%= link_to 'Edit', edit_mentionslegale_path(mentionslegale) %></td>
+        <td><%= link_to 'Destroy', mentionslegale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mentionslegale', new_mentionslegale_path %>

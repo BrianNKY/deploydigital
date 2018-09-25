@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cgus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cgus.each do |cgu| %>
+      <tr>
+        <td><%= link_to 'Show', cgu %></td>
+        <td><%= link_to 'Edit', edit_cgu_path(cgu) %></td>
+        <td><%= link_to 'Destroy', cgu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cgu', new_cgu_path %>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Categorie Competences</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categorie_competences.each do |categorie_competence| %>
+      <tr>
+        <td><%= categorie_competence.nom %></td>
+        <td><%= link_to 'Show', categorie_competence %></td>
+        <td><%= link_to 'Edit', edit_categorie_competence_path(categorie_competence) %></td>
+        <td><%= link_to 'Destroy', categorie_competence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Categorie Competence', new_categorie_competence_path %>

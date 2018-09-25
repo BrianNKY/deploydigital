@@ -1,0 +1,125 @@
+// Couleurs
+
+$black: #212121;
+
+// Général
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+body {
+
+    background-color: #fafafa;
+
+}
+
+// Homepage
+
+nav .navbar {
+
+    background-color: $black;
+}
+
+.component-navbar {
+
+    margin-bottom: 4em;
+
+}
+
+.component-button-submit {
+
+    background-color: black !important;
+    color: white !important;
+}
+
+.component-intro-section {
+
+    margin-bottom: 2em;
+    margin-top: 1em;
+}
+
+.component-title-section {
+
+    color: black;
+    font-weight: normal;
+    font-size: 1.9em;
+
+}
+
+.component-title-description {
+
+    font-size: 0.9em;
+
+}
+
+h1 {
+
+    font-weight: bold;
+}
+
+body > header:nth-child(6) > div:nth-child(2) > form > button {
+
+    background-color: blue;
+
+}
+
+.footer {
+
+    margin-top: 1em;
+}
+
+
+.bg-dark {
+
+    background-color: $black !important;
+}
+
+.component-card-siteweb {
+
+    border-radius: 1em;
+    margin-bottom: 2em;
+
+}
+
+.component-card-expertise {
+    border-radius: 1em;
+
+}
+
+#pictureMe {
+
+    width: 190px;
+    border-radius: 50%;
+}
+
+.component-section {
+
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.item-social-navbar {
+
+    color: white;
+    padding: 0.1em;
+    margin-left: 1em;
+}
+
+body > header.component-scrollspy.d-none.d-xl-block > nav {
+    margin-top: 8em;
+    float: left;
+}
+
+.component-card-portfolio {
+
+    margin-bottom: 1em;
+    
+}
+
+.text-footer {
+
+    color: black;
+}

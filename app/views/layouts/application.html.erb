@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfoliobrian</title>
+
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <%= stylesheet_link_tag "bootstrap-material-design.min.css" %>
+    <%= stylesheet_link_tag "main.css" %>
+    <%= javascript_include_tag 'jquery-3.2.1.slim.min.js' %>
+    <%= javascript_include_tag 'bootstrap-material-design.js' %>
+    <%= javascript_include_tag 'popper.js' %>
+    <%= javascript_include_tag 'app.js' %>
+
+  </head>
+
+  <style>
+
+    .card {
+
+            height: 100%;
+        }
+    </style>
+
+  <body>
+
+     <header class="component-navbar">
+
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+
+            <div class="container">
+                    <li class="navbar-brand nav-item d-lg-none"" ><img style="width: 30px; margin-right:5px;
+                        border-radius: 50%;" src="<%= image_path('me.jpg') %>" alt="img-fluid img-thumbnail"> Brian Thoraval 
+                    </li>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span> <small> 
+                    <% if current_page?(root_path) %> Home 
+                    <% elsif current_page?(resumes_path) %> Resume 
+                    <% elsif current_page?(portfolios_path) %> Porfolio 
+                    <% elsif current_page?(freelances_path) %> Freelance 
+                    <% elsif current_page?(contacts_path) %> Contact 
+                    <% end %> </small>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item <% if current_page?(root_path) %> active <% end %>">
+                            <a class="nav-link" href="<%= root_path %>">Home <% if current_page?(root_path) %> <span class="sr-only">(current)</span> <% end %></a>
+                        </li>
+
+                        <li class="nav-item <% if current_page?(resumes_path) %> active <% end %>">
+                            <a class="nav-link" href="<%= resumes_path %>">Resume <% if current_page?(resumes_path) %> <span class="sr-only">(current)</span> <% end %> </a>
+                        </li>
+                        <li class="nav-item <% if current_page?(portfolios_path) %> active <% end %>">
+                            <a class="nav-link" href="<%= portfolios_path %>">Portfolio <% if current_page?(portfolios_path) %> <span class="sr-only">(current)</span> <% end %></a>
+                        </li>
+
+                        <li class="nav-item <% if current_page?(freelances_path) %> active <% end %>">
+                            <a class="nav-link" href="<%= freelances_path %>">Freelance <% if current_page?(freelances_path) %> <span class="sr-only">(current)</span> <% end %></a>
+                        </li>
+
+                        <li class="nav-item <% if current_page?(contacts_path) %> active <% end %>">
+                            <a class="nav-link" href="<%= contacts_path %>">Contact <% if current_page?(contacts_path) %> <span class="sr-only">(current)</span> <% end %></a>
+                        </li>
+
+                    </ul>
+
+                    <a href="#"><i class="item-social-navbar fab fa-linkedin"></i></a>
+
+                    <a href="#"><i class="item-social-navbar fab fa-github"></i></a>
+                    <a href="#"><i class="item-social-navbar fab fa-twitter"></i></a>
+                    <a href="#"><i class="item-social-navbar fas fa-envelope"></i></a>
+
+                                   <li class="nav-item"><img style="width: 30px;
+                        border-radius: 50%;" src="<%= image_path('me.jpg') %>" alt="img-fluid img-thumbnail"></li>
+                </div>
+
+            </div>
+        </nav>
+
+
+    </header>
+
+    <div class=" container">
+
+
+
+        <!-- Me -->
+        <header class="component-jumbotron">
+
+            <div class="container">
+
+                <div class="row d-flex">
+                    <div class="mx-auto">
+
+                        <img id="pictureMe"  class="d-flex mx-auto img-fluid img-thumbnail" src="<%= image_path('me.jpg') %>" alt="img-fluid img-thumbnail" style="width:190px">
+
+                        <h1 class="text-center"> Brian Thoraval </h1>
+                        <p class="text-center"> Freelance & Développeur web</p>
+                        <p class="text-center"> <i style="font-size: 1.1em" class="material-icons prefix">
+                                mail
+                            </i> contact@brian-thoraval.com</p>
+                        <p class="text-center"><i style="font-size:  1.1em" class="material-icons prefix">
+                                phone
+                            </i> 06.72.69.79.62 </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+    <%= yield %>
+
+    </div>
+
+    <footer class=" pt-5 text-muted text-center text-small">
+        <p class="mb-1">Brian Thoraval © 2017 - 2018 </p>
+        <ul class="list-inline">
+            
+                <li class="list-inline-item"><a href="<%= faqs_path  %>" class="text-footer">FAQ</a></li>-
+            <li class="list-inline-item"><a href="<%= mentionslegales_path  %>" class="text-footer">Mentions légales</a></li>- 
+            <li class="list-inline-item"><a href="<%= cgus_path  %>" class="text-footer">CGU</a></li>
+        </ul>
+    </footer>
+  </body>
+</html>
